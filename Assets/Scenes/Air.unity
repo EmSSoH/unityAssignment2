@@ -227,7 +227,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b319844d789c0aa4d9e9542beaf1d90d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -838,6 +838,9 @@ GameObject:
   - component: {fileID: 1051824693}
   - component: {fileID: 1051824695}
   - component: {fileID: 1051824694}
+  - component: {fileID: 1051824698}
+  - component: {fileID: 1051824697}
+  - component: {fileID: 1051824696}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -891,13 +894,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: start text
 --- !u!222 &1051824695
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -906,6 +909,124 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051824692}
   m_CullTransparentMesh: 0
+--- !u!114 &1051824696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051824692}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06097450dd10c490bb4cdbc232fa8775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyTweenName: 
+  myTweenType: 4
+  myCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  delay: 0
+  duration: 0.4
+  IgnoreTimeScale: 0
+  percentComplete: 0
+  playOnStart: 0
+  startingColor: {r: 0, g: 0, b: 0, a: 255}
+  endColor: {r: 0.63178587, g: 1, b: 0, a: 255}
+  colorResults: {r: 0, g: 0, b: 0, a: 255}
+  imageColor: {fileID: 0}
+  textColor: {fileID: 0}
+  materialColor: {fileID: 0}
+--- !u!114 &1051824697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051824692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ab7a8bd96fb44d3d8f2737e8315a74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyTweenName: ScorePop
+  myTweenType: 4
+  myCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  delay: 0
+  duration: 0.4
+  IgnoreTimeScale: 0
+  percentComplete: 0
+  playOnStart: 0
+  startingVector: {x: 1, y: 1, z: 1}
+  endVector: {x: 1.5, y: 1.5, z: 1}
+  vector3Results: {x: 0, y: 0, z: 0}
+  ignoreRebalance: 0
+  TweenTransformProperty: 2
+  CopyTransformTo: 0
+  SetTransformTo: 0
+  useDefaultVector: 0
+  defaultVector: {x: 0, y: 0, z: 0}
+--- !u!114 &1051824698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051824692}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1858e868fb02e4dd5a78562e0b80574e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sequenceName: ScoreAnimation
+  testSequenceOnStart: 1
+  tweenSequence:
+  - {fileID: 1051824696}
+  - {fileID: 1051824697}
 --- !u!1001 &1251393262
 PrefabInstance:
   m_ObjectHideFlags: 0

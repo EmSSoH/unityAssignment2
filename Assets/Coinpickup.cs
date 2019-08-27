@@ -32,6 +32,8 @@ public class Coinpickup : MonoBehaviour
             count = count + 1;
             SetCountText();
             ping.Play();
+            countText.GetComponent<TweenTransforms>().Begin();
+
         }
     }
 
